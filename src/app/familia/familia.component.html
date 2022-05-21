@@ -1,0 +1,15 @@
+<h2>{{titulo}}</h2>
+<button class="btn btn-primary" (click)="agregar()">agregar</button>
+<input type="text" name="nombre" placeholder="ingrese su nombre" [(ngModel)]="personaNueva">
+<button class="btn btn-danger" (click)="quitar()">eliminar</button>
+
+<div *ngIf="personas.length === 0">
+    <h3>no hay familiares para mostrar</h3>
+</div>
+
+<div>
+    <ul>
+        <li *ngFor="let persona of personas">{{persona}}</li>
+    </ul>
+</div>
+
